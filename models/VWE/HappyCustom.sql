@@ -1,0 +1,1 @@
+select * from VWE_S3.PUBLIC.REVIEW_NEW where RATING = 3 and REMARKS_BY_UNHAPPY_CUSTOMERS = 'Smell is good'
