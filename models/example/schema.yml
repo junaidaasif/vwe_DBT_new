@@ -1,6 +1,19 @@
 
 version: 2
 
+
+
+sources:
+  - name: public
+    tables:
+      - name: order_new
+      - name: order_table
+    freshness: # default freshness
+      warn_after: {count: 12, period: hour}
+      error_after: {count: 24, period: hour}
+    loaded_at_field: order_date
+ 
+
 models:
     - name: my_first_dbt_model
       description: "A starter dbt model"
