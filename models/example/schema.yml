@@ -1,6 +1,23 @@
 
 version: 2
 
+metrics:
+  - name: review_data_met
+    label: review
+    model: ref('review_data')
+    description: "The Review"
+
+    type: count
+    sql: customer_id # superfluous here, but shown as an example
+
+    timestamp: orde_date
+    time_grains: [day, week, month]
+
+    dimensions:
+      - customer_id
+      
+    
+   
 
 
 sources:
